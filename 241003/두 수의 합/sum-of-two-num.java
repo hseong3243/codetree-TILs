@@ -27,7 +27,7 @@ public class Main {
         for(int i=0; i<n-1; i++) {
             if(arr[i] * 2 == k) {
                 result += map.get(i) - 1;
-                map.put(i, map.get(i) - 1);
+                map.put(arr[i], map.get(i) - 1);
                 continue;
             }
 
