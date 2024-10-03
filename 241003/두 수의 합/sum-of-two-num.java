@@ -26,8 +26,8 @@ public class Main {
         Arrays.sort(arr);
         for(int i=0; i<n-1; i++) {
             if(arr[i] * 2 == k) {
-                result += map.get(i) - 1;
-                map.put(arr[i], map.get(i) - 1);
+                result += map.get(arr[i]) - 1;
+                map.put(arr[i], map.get(arr[i]) - 1);
                 continue;
             }
 
