@@ -13,7 +13,13 @@ public class Main {
                 if(i > j) {
                     continue;
                 }
-                dp[i][j] = dp[i-1][j] + dp[i][j-1] + dp[i][j];
+                if(i-1 > 0) {
+                    dp[i][j] += dp[i-1][j];
+                }
+                if(j-1 > 0) {
+                    dp[i][j] += dp[i][j-1];
+                }
+
             }
         }
         System.out.println(dp[n][n]);
