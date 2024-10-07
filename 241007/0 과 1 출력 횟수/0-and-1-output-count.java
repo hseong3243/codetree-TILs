@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        codeTree(n);
-        System.out.println(one + " " + zero);
+        new Main().codeTree(n);
+        System.out.println(zero + " " + one);
     }
 
     private static int one = 0;
