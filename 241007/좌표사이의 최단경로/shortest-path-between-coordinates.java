@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -6,10 +7,12 @@ public class Main {
         String[] split = br.readLine().split(" ");
         int h = Integer.parseInt(split[0]);
         int n = Integer.parseInt(split[1]);
-        int[][] dp = new int[n+1][n+1];
-        dp[h][h] = 1;
-        for(int i=h; i<=n; i++) {
-            for(int j=h; j<=n; j++) {
+        int a = Math.min(h, n);
+        int b= Math.max(h, n);
+        int[][] dp = new int[b+1][b+1];
+        dp[a][a] = 1;
+        for(int i=a; i<=b; i++) {
+            for(int j=a; j<=b; j++) {
                 if(i > j) {
                     continue;
                 }
@@ -19,9 +22,8 @@ public class Main {
                 if(j-1 > 0) {
                     dp[i][j] += dp[i][j-1];
                 }
-
             }
         }
-        System.out.println(dp[n][n]);
+        System.out.println(Math.max(dp[a][a], dp[b][b]));
     }
 }
