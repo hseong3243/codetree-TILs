@@ -9,7 +9,7 @@ public class Main {
         int n = Integer.parseInt(split[1]);
         int a = Math.min(h, n);
         int b= Math.max(h, n);
-        int[][] dp = new int[b+1][b+1];
+        long[][] dp = new long[b+1][b+1];
         dp[a][a] = 1;
         for(int i=a; i<=b; i++) {
             for(int j=a; j<=b; j++) {
