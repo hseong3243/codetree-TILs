@@ -18,12 +18,12 @@ public class Main {
         for(int num : arr) {
             if(num > prev) {
                 if(!order) {
-                    len = 0;
+                    len = 1;
                     order = true;
                 }
             } else if(num < prev) {
                 if(order) {
-                    len = 0;
+                    len = 1;
                     order = false;
                 }
             }
